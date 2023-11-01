@@ -1,0 +1,6 @@
+npx sequelize-cli model:generate --name Mahasiswa --attributes nim:string,nama:string,alamat:string
+npx sequelize-cli model:generate --name Dosen --attributes nidn:string,nama:string,alamat:string
+npx sequelize-cli model:generate --name MataKuliah --attributes kode_matkul:string,nama:string,sks:integer
+npx sequelize-cli model:generate --name DosenMatkul --attributes id_dosen:integer,id_matkul:integer
+
+npx sequelize-cli model:generate --name JadwalMatkul --attributes id_matkul:integer,hari:string,jam:time
