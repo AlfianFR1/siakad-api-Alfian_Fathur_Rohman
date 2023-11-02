@@ -46,10 +46,10 @@ mahasiswaBimbinganController.create = async (req,res)=>{
 }
 
 mahasiswaBimbinganController.getAll=async(req,res)=>{
-    const getDsnMhs = await Mahasiswa.findAll({
+    const getDsnMhs = await Dosen.findAll({
         include : [
             {
-                model : Dosen
+                model : Mahasiswa
             }
         ]
     })
@@ -60,10 +60,10 @@ mahasiswaBimbinganController.getAll=async(req,res)=>{
 
 mahasiswaBimbinganController.getById=async(req,res)=>{
     const{id}=req.params
-    const getDsnMhs = await Mahasiswa.findOne({
+    const getDsnMhs = await Dosen.findOne({
         include : [
             {
-                model : Dosen
+                model : Mahasiswa
             }
         ],
         where : {
